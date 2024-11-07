@@ -32,6 +32,10 @@ io.on("connection", (socket) => {
 app.get("/", (req, res) => {
   res.send("Welcome to QuizOnline Backend!");
 });
+app.get("/about", (req, res) => {
+  res.send("Jikky - 2111110217 \n Rizky Pane 211111712 \n Hadyan 211112533");
+});
+
 app.listen(port, () => {
   console.log(`QuizOnline Backend is running at http://localhost:${port}`);
 });
