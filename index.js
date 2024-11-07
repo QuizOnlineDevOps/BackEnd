@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`QuizOnline Backend is running at http://localhost:${port}`);
 });
-//database
+//Database
 mongoose
   .connect(process.env.DATABASE_URL, {})
   .then(() => {
