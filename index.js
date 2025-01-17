@@ -28,12 +28,15 @@ io.on("connection", (socket) => {
     console.log("User disconnected");
   });
 });
-//backend
 app.get("/", (req, res) => {
   res.send("Selamat datang di server backend kami!");
 });
-// app.get("/about", (req, res) => {
-// });
+
+app.get("/pangkat2/:angka1", (req, res) => {
+  const angka = req.params.angka1;
+  hasil = angka ** 2;
+  res.send("hasil pangkat sama dengan " + hasil);
+})
 
 app.listen(port, () => {
   console.log(`QuizOnline Backend is running at http://localhost:${port}`);
